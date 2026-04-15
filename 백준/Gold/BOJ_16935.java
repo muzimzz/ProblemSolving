@@ -1,4 +1,4 @@
-    package Gold;
+    package gold;
 
     import java.util.*;
     import java.io.*;
