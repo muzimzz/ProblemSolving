@@ -1,6 +1,7 @@
 /.metadata/
 # === Java & Build Outputs ===
 
+Test.java
 bin/
 out/
 target/
