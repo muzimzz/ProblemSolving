@@ -1,6 +1,5 @@
-package Gold;
+package gold;
 
-import java.util.*;
 import java.io.*;
 
 public class BOJ_15927 {
