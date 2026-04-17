@@ -30,5 +30,3 @@ start, end = map(int, sys.stdin.readline().split())
 bfs(start-1)
 print(dist[end-1])
 
-
-
