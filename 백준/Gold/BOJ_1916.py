@@ -15,7 +15,7 @@ def bfs(start):
             next, new_cost = target
             if dist[next] > cost + new_cost:
                 dist[next] = cost + new_cost
-                heapq.heappush(hq, (new_cost, next))
+                heapq.heappush(hq, (cost + new_cost, next))
 
 
 N = int(input())
@@ -26,9 +26,9 @@ for i in range(M):
     S, E, cost = map(int, sys.stdin.readline().split())
     graph[S-1].append((E-1, cost));
 
-start, end = map(int, sys.stdin.readline.split())
-bfs(start)
-print(dist[end])
+start, end = map(int, sys.stdin.readline().split())
+bfs(start-1)
+print(dist[end-1])
 
 
 
