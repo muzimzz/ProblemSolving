@@ -8,7 +8,7 @@ public class BOJ_15649 {
     static int N, M;
     static int[] input;
     static int[] answer;
-    static boolean[] selected;
+    // static boolean[] selected;
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
@@ -20,19 +20,19 @@ public class BOJ_15649 {
         M = Integer.parseInt(st.nextToken());
 
         input = new int[N];
-        selected = new boolean[N];
+        // selected = new boolean[N];
         answer = new int[M];
 
         for (int i = 0; i < N; i++) {
             input[i] = i+1;
         }
 
-        dfs(0);
+        dfs(0, 0);
 
         System.out.println(sb);
     }
 
-    public static void dfs(int idx) {
+    public static void dfs(int idx, int start) {
         if (idx >= M) {
             for (int a : answer)
                 sb.append(a).append(" ");
@@ -40,13 +40,10 @@ public class BOJ_15649 {
             return;
         }
 
-        for (int i = 0; i < N; i++) {
-            if (!selected[i]) {
-                selected[i] = true;
-                answer[idx] = input[i];
-                dfs(idx + 1);
-                selected[i] = false;
-            }
+        for (int i = start; i < N; i++) {
+            answer[idx] = input[i];
+            dfs(idx + 1, i + 1);
         }
     }
 }
+
