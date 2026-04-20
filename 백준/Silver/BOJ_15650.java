@@ -45,6 +45,7 @@ public class BOJ_15650 {
         for (int i = start; i < N; i++) {
             answer[idx] = input[i];
             dfs(idx + 1, i + 1);
+
         }
     }
 }
