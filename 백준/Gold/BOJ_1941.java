@@ -81,8 +81,6 @@ public class BOJ_1941 {
             }
         }
 
-        if (cnt == SIZE) {
-            return true;
-        } else return false;
+        return cnt == SIZE;
     }
 }
