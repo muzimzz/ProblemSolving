@@ -15,7 +15,7 @@ public class BOJ_1038 {
 
         N = Integer.parseInt(br.readLine());
         q = new ArrayDeque<>();
-        long answer = 0;
+        long answer = -1;
 
         for (long i = 0; i <= 9; i++) {
             q.offer(i);
@@ -33,7 +33,7 @@ public class BOJ_1038 {
 
             long n = num % 10;
             for (int i = 0; i < n; i++) {
-                q.offer(num * 10 + n);
+                q.offer(num * 10 + i);
             }
 
             index++;
